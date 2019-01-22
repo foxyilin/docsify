@@ -10,25 +10,34 @@
 </head>
 <body>
   <nav>
-  <a href="#/">EN</a>
-  <a href="#/zh-cn/">中文</a>
+  <a href="#/">一支铅笔</a>
+  <a href="#/about/">关于我们</a>
   </nav>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: '',
-      repo: '',
-      // 加载 _sidebar.md
-      loadSidebar: true,
-      alias: {
-      '/.*/_sidebar.md': '/_sidebar.md'
-      }
-      maxLevel: 3,
+      repo: 'foxyilin/docsify'
       coverpage: true
-      // load from _navbar.md
+      coverpage: ['/', '/zh-cn/']
+
+      loadSidebar: true,
+      subMaxLevel: 3
+      // 加载 summary.md
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      }
+
+      // 加载 _navbar.md
       loadNavbar: true,
 
+      // 加载 nav.md
+      loadNavbar: 'nav.md'
+
+
     }
+
+
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 </body>
